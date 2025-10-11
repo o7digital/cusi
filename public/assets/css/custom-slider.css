@@ -1,0 +1,16 @@
+/* Augmentation de la hauteur du slider pour mieux voir les visages et bouquets */
+.slideshow.type3 {
+  height: 35rem !important; /* mobile */
+}
+
+@media (min-width: 992px) {
+  .slideshow.type3 {
+    height: 50rem !important; /* desktop - environ 800px */
+  }
+}
+
+/* Ensure les images gardent leur ratio */
+.slideshow-bg__img {
+  object-fit: cover !important;
+  object-position: center center !important;
+}

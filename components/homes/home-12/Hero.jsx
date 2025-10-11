@@ -39,25 +39,27 @@ export default function Hero() {
             >
               <Image
                 loading="lazy"
-                src="/assets/images/home/demo12/slideshow-pattern.png"
+                src={elm.imageUrl}
                 width="1903"
-                height="560"
-                alt="Pattern"
+                height="800"
+                alt={elm.imageAlt || "Slide background"}
                 className="slideshow-bg__img object-fit-cover"
               />
             </div>
-            <div className="position-absolute left-0 right-0 bottom-0 top-0 container">
-              <div className="slideshow-character position-absolute position-right-center mx-xl-5">
-                <Image
-                  loading="lazy"
-                  src={elm.imgUrl2}
-                  width="518"
-                  height="329"
-                  alt="Woman Fashion 1"
-                  className="slideshow-character__img animate animate_fade animate_btt animate_delay-9 w-auto h-auto"
-                />
+            {elm.imgUrl2 && (
+              <div className="position-absolute left-0 right-0 bottom-0 top-0 container">
+                <div className="slideshow-character position-absolute position-right-center mx-xl-5">
+                  <Image
+                    loading="lazy"
+                    src={elm.imgUrl2}
+                    width="518"
+                    height="329"
+                    alt={elm.imgAlt || "Slide detail"}
+                    className="slideshow-character__img animate animate_fade animate_btt animate_delay-9 w-auto h-auto"
+                  />
+                </div>
               </div>
-            </div>
+            )}
             <div className="slideshow-text container position-absolute start-50 top-50 translate-middle">
               <h6 className="text_dash text-uppercase fs-base fw-medium animate animate_fade animate_btt animate_delay-3 theme-color">
                 {elm.title}

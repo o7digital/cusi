@@ -81,6 +81,14 @@ export default function RootLayout({ children }) {
           href="/assets/css/custom-slider.css"
           rel="stylesheet"
         />
+        <link
+          href="/assets/css/custom-theme.css"
+          rel="stylesheet"
+        />
+        <link
+          href="/assets/css/custom-slider-text.css"
+          rel="stylesheet"
+        />
       </head>
       <body>
         <Svgs />

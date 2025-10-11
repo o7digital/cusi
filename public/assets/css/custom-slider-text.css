@@ -1,0 +1,63 @@
+/* Styles pour les titres sur les photos du slider */
+.slideshow-text h6,
+.slideshow-text h2 {
+  color: white !important;
+  background-color: rgba(74, 95, 59, 0.45) !important; /* Gris-vert foncé à 45% d'opacité */
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  display: inline-block !important;
+  margin-bottom: 12px !important;
+  backdrop-filter: blur(3px) !important; /* Effet de flou léger pour plus d'élégance */
+  -webkit-backdrop-filter: blur(3px) !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important; /* Ombre légère pour la lisibilité */
+}
+
+/* Style spécifique pour le sous-titre (h6) */
+.slideshow-text h6 {
+  font-size: 14px !important;
+  padding: 6px 12px !important;
+  margin-bottom: 8px !important;
+}
+
+/* Styles spécifiques pour les titres principaux (h2) */
+.slideshow-text h2 {
+  font-size: 42px !important;
+  font-weight: bold !important;
+  padding: 12px 20px !important;
+  margin-bottom: 16px !important;
+  line-height: 1.2 !important;
+}
+
+/* Responsive - adaptation mobile */
+@media (max-width: 768px) {
+  .slideshow-text h2 {
+    font-size: 28px !important;
+    padding: 8px 14px !important;
+  }
+  
+  .slideshow-text h6 {
+    font-size: 12px !important;
+    padding: 4px 10px !important;
+  }
+}
+
+/* Style pour le lien "Discover More" */
+.slideshow-text .btn-link {
+  color: white !important;
+  background-color: rgba(109, 139, 90, 0.6) !important; /* Vert sage plus visible */
+  padding: 10px 20px !important;
+  border-radius: 25px !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  margin-top: 10px !important;
+  backdrop-filter: blur(3px) !important;
+  -webkit-backdrop-filter: blur(3px) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.slideshow-text .btn-link:hover {
+  background-color: rgba(109, 139, 90, 0.8) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  transform: translateY(-2px) !important;
+}

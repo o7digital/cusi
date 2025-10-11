@@ -1,0 +1,24 @@
+/* Nouvelles couleurs pour un style plus floral et naturel */
+.theme-12 {
+  --theme-color: #6d8b5a !important; /* Vert sage naturel pour remplacer le rose */
+  --theme-color-secondary: #4a5f3b !important; /* Vert foncé naturel pour remplacer le violet */
+  --theme-color-third: #f8d775 !important; /* Garde le jaune doré */
+}
+
+/* Application directe aux éléments du header */
+.theme-12 .theme-bg-color {
+  background-color: #6d8b5a !important;
+}
+
+.theme-12 .theme-bg-color-secondary {
+  background-color: #4a5f3b !important;
+}
+
+/* Couleurs de texte pour assurer la lisibilité */
+.theme-12 .theme-color {
+  color: #6d8b5a !important;
+}
+
+.theme-12 .theme-color-secondary {
+  color: #4a5f3b !important;
+}

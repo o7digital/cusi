@@ -1,76 +1,80 @@
-/* Styles pour les titres sur les photos du slider - effet bandeau comme Touski */
+/* Styles pour les titres sur les photos du slider - effet élégant et subtil */
 .slideshow-text h6,
 .slideshow-text h2 {
   color: white !important;
-  background-color: rgba(74, 95, 59, 0.75) !important; /* Bandeau vert-gris semi-transparent */
-  padding: 15px 25px !important;
-  border-radius: 0 !important;
+  background-color: rgba(0, 0, 0, 0.6) !important; /* Arrière-plan noir semi-transparent élégant */
+  padding: 12px 20px !important;
+  border-radius: 4px !important;
   display: inline-block !important;
   margin-bottom: 15px !important;
   font-weight: bold !important;
-  position: relative !important;
-  /* Effet de bandeau qui s'étend */
-  box-shadow: 0 0 0 100vw rgba(74, 95, 59, 0.75) !important;
-  clip-path: inset(0 -100vw) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) !important;
 }
 
 /* Style spécifique pour le sous-titre (h6) */
 .slideshow-text h6 {
   font-size: 14px !important;
-  padding: 8px 25px !important;
-  margin-bottom: 5px !important;
+  padding: 8px 16px !important;
+  margin-bottom: 8px !important;
   font-weight: 500 !important;
   text-transform: uppercase !important;
   letter-spacing: 1px !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
 /* Styles spécifiques pour les titres principaux (h2) */
 .slideshow-text h2 {
-  font-size: 48px !important;
+  font-size: 42px !important;
   font-weight: bold !important;
-  padding: 20px 25px !important;
-  margin-bottom: 10px !important;
-  line-height: 1.1 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 2px !important;
+  padding: 16px 24px !important;
+  margin-bottom: 12px !important;
+  line-height: 1.2 !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
 /* Responsive - adaptation mobile */
 @media (max-width: 768px) {
   .slideshow-text h2 {
-    font-size: 32px !important;
-    padding: 15px 20px !important;
-    letter-spacing: 1px !important;
+    font-size: 28px !important;
+    padding: 12px 18px !important;
   }
   
   .slideshow-text h6 {
     font-size: 12px !important;
-    padding: 6px 20px !important;
+    padding: 6px 12px !important;
+  }
+  
+  .slideshow-text .btn-link {
+    padding: 10px 20px !important;
+    font-size: 13px !important;
   }
 }
 
-/* Style pour le lien "Discover More" - style bandeau comme les titres */
+/* Style pour le lien "Discover More" - bouton élégant */
 .slideshow-text .btn-link {
   color: white !important;
-  background-color: rgba(248, 215, 117, 0.9) !important; /* Bandeau doré */
-  padding: 12px 25px !important;
-  border-radius: 0 !important;
+  background-color: rgba(248, 215, 117, 0.9) !important;
+  padding: 12px 24px !important;
+  border-radius: 25px !important;
   text-decoration: none !important;
   display: inline-block !important;
-  margin-top: 25px !important;
-  border: none !important;
+  margin-top: 20px !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
   transition: all 0.3s ease !important;
   font-weight: 600 !important;
   font-size: 14px !important;
   text-transform: uppercase !important;
   letter-spacing: 1px !important;
-  /* Effet de bandeau qui s'étend */
-  box-shadow: 0 0 0 100vw rgba(248, 215, 117, 0.9) !important;
-  clip-path: inset(0 -100vw) !important;
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
 }
 
 .slideshow-text .btn-link:hover {
   background-color: rgba(248, 215, 117, 1) !important;
-  box-shadow: 0 0 0 100vw rgba(248, 215, 117, 1) !important;
-  transform: none !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
 }

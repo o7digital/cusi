@@ -16,7 +16,7 @@ export default function Header12() {
             <div className="logo">
               <Link href="/">
                 <div className="logo__text" style={{
-                  color: 'white',
+                  color: '#FF6B35',
                   fontSize: '28px',
                   fontWeight: 'bold',
                   letterSpacing: '2px',

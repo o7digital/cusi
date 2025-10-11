@@ -1,24 +1,51 @@
-/* Nouvelles couleurs pour un style plus floral et naturel */
+/* Nouvelles couleurs grises pour un style épuré et professionnel */
 .theme-12 {
-  --theme-color: #6d8b5a !important; /* Vert sage naturel pour remplacer le rose */
-  --theme-color-secondary: #4a5f3b !important; /* Vert foncé naturel pour remplacer le violet */
+  --theme-color: #e5e5e5 !important; /* Gris clair pour la deuxième frange */
+  --theme-color-secondary: #2c2c2c !important; /* Gris foncé pour la frange du haut */
   --theme-color-third: #f8d775 !important; /* Garde le jaune doré */
 }
 
 /* Application directe aux éléments du header */
 .theme-12 .theme-bg-color {
-  background-color: #6d8b5a !important;
+  background-color: #e5e5e5 !important; /* Gris clair */
 }
 
 .theme-12 .theme-bg-color-secondary {
-  background-color: #4a5f3b !important;
+  background-color: #2c2c2c !important; /* Gris foncé */
 }
 
 /* Couleurs de texte pour assurer la lisibilité */
 .theme-12 .theme-color {
-  color: #6d8b5a !important;
+  color: #333333 !important; /* Texte foncé sur fond clair */
 }
 
 .theme-12 .theme-color-secondary {
-  color: #4a5f3b !important;
+  color: #ffffff !important; /* Texte blanc sur fond foncé */
+}
+
+/* Styles spécifiques pour le header */
+.theme-12 .header-top {
+  background-color: #2c2c2c !important; /* Gris foncé en haut */
+}
+
+.theme-12 .header-bottom {
+  background-color: #e5e5e5 !important; /* Gris clair en bas */
+}
+
+/* Navigation - texte noir/gris foncé */
+.theme-12 .navigation__list a {
+  color: #333333 !important;
+}
+
+.theme-12 .navigation__list a:hover {
+  color: #000000 !important;
+}
+
+/* Header tools (icônes) - couleurs adaptées */
+.theme-12 .header-tools svg {
+  fill: #ffffff !important; /* Blanc sur fond foncé (header-top) */
+}
+
+.theme-12 .header-bottom .header-tools svg {
+  fill: #333333 !important; /* Foncé sur fond clair (header-bottom) */
 }

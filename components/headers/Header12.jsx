@@ -15,13 +15,15 @@ export default function Header12() {
           <div className="container d-flex align-items-center">
             <div className="logo">
               <Link href="/">
-                <Image
-                  src="/assets/images/logo-white.png"
-                  width={112}
-                  height={28}
-                  alt="Uomo"
-                  className="logo__image"
-                />
+                <div className="logo__text" style={{
+                  color: 'white',
+                  fontSize: '28px',
+                  fontWeight: 'bold',
+                  letterSpacing: '2px',
+                  fontFamily: 'Jost, sans-serif'
+                }}>
+                  CUSI
+                </div>
               </Link>
             </div>
             {/* <!-- /.logo --> */}

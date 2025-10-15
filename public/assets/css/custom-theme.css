@@ -1,17 +1,17 @@
 /* Nouvelles couleurs grises pour un style épuré et professionnel */
 .theme-12 {
-  --theme-color: #e5e5e5 !important; /* Gris clair pour la deuxième frange */
-  --theme-color-secondary: #e5e5e5 !important; /* Gris clair aussi pour la frange CUSI */
+  --theme-color: #ffffff !important; /* Fond blanc comme le cadre du logo */
+  --theme-color-secondary: #ffffff !important; /* Fond blanc uniforme */
   --theme-color-third: #f8d775 !important; /* Garde le jaune doré */
 }
 
 /* Application directe aux éléments du header */
 .theme-12 .theme-bg-color {
-  background-color: #e5e5e5 !important; /* Gris clair */
+  background-color: #ffffff !important; /* Blanc */
 }
 
 .theme-12 .theme-bg-color-secondary {
-  background-color: #e5e5e5 !important; /* Gris clair pour la frange CUSI */
+  background-color: #ffffff !important; /* Blanc pour la frange CUSI */
 }
 
 /* Couleurs de texte pour assurer la lisibilité */
@@ -25,16 +25,17 @@
 
 /* Styles spécifiques pour le header */
 .theme-12 .header-top {
-  background-color: #e5e5e5 !important; /* Gris clair en haut (frange CUSI) */
+  background-color: #ffffff !important; /* Fond blanc comme le logo */
 }
 
 .theme-12 .header-bottom {
-  background-color: #e5e5e5 !important; /* Gris clair en bas */
+  background-color: #ffffff !important; /* Fond blanc uniforme */
 }
 
 /* Navigation - texte noir/gris foncé */
 .theme-12 .navigation__list a {
   color: #333333 !important;
+  font-size: 1.3rem !important; /* +30% */
 }
 
 .theme-12 .navigation__list a:hover {

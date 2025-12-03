@@ -26,7 +26,7 @@ export default function Featured() {
     <section className="products-grid">
       <div className="container">
         <div className="d-flex align-items-center justify-content-center justify-content-md-between flex-wrap mb-3 pb-xl-2 mb-xl-4 gap-4">
-          <h2 className="section-title fw-normal">Featured Products</h2>
+          <h2 className="section-title fw-normal">Nuestros Arreglos</h2>
 
           <ul
             className="nav nav-tabs justify-content-center"

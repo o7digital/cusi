@@ -392,24 +392,6 @@ export const slidesData7 = [
     subtitle1: "Handcrafted floral arrangements",
     subtitle2: "Delivered with care",
   },
-  {
-    id: 2,
-    backgroundColor: "#fff8f0",
-    imageUrl: "/assets/images/jeunefille.jpg",
-    imageAlt: "Woman holding bouquet in a field",
-    title: "Moments to Remember",
-    subtitle1: "Seasonal blooms and custom gifts",
-    subtitle2: "For every celebration",
-  },
-  {
-    id: 3,
-    backgroundColor: "#fff2f5",
-    imageUrl: "/assets/images/mexicana.jpg",
-    imageAlt: "Smiling woman with bright bouquet",
-    title: "Designs with Heart",
-    subtitle1: "Expressive colors and lush textures",
-    subtitle2: "Curated by florists",
-  },
   // Add more slide data objects as needed
 ];
 

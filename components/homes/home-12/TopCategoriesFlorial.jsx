@@ -23,7 +23,7 @@ export default function TopCategoriesFlorial() {
                 href={category.href || "/shop-1"}
                 className="top-category-card text-center text-decoration-none d-block"
               >
-                <div className="top-category-card__media mx-auto mb-3">
+                <div className="top-category-card__media mx-auto mb-3" style={{transform: 'scale(1.3)'}}>
                   <Image
                     loading="lazy"
                     src={category.imageSrc}
@@ -36,7 +36,7 @@ export default function TopCategoriesFlorial() {
                     }}
                   />
                 </div>
-                <span className="top-category-card__label fw-medium">
+                <span className="top-category-card__label fw-medium" style={{fontSize: '1.1em', marginTop: '10px', display: 'block'}}>
                   {category.name}
                 </span>
               </Link>

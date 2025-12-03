@@ -83,15 +83,25 @@ export default function Nav() {
           Nuestras Flores
         </Link>
       </li>
-      <li className="navigation__item">
+      <li className="navigation__item navigation__item_has-sub">
         <Link
-          href="/about"
-          className={`navigation__link ${
-            pathname == "/about" ? "menu-active" : ""
-          }`}
+          href="/servicios"
+          className={`navigation__link ${pathname.startsWith("/servicios") ? "menu-active" : ""}`}
         >
           Servicios
         </Link>
+        <ul className="sub-menu simple-submenu list-unstyled">
+          <li><Link href="/servicios/eventos-sociales">Eventos Sociales</Link></li>
+          <li><Link href="/servicios/bodas">Bodas</Link></li>
+          <li><Link href="/servicios/cumpleanos">Cumpleaños</Link></li>
+          <li><Link href="/servicios/10-de-mayo">10 de Mayo</Link></li>
+          <li><Link href="/servicios/dia-de-muertos">Día de Muertos</Link></li>
+          <li><Link href="/servicios/navidad">Navidad</Link></li>
+          <li><Link href="/servicios/hogar-y-oficina">Hogar y Oficina</Link></li>
+          <li><Link href="/servicios/empresarial">Empresarial</Link></li>
+          <li><Link href="/servicios/orquideas-premium">Orquídeas Premium</Link></li>
+          <li><Link href="/servicios/arreglos-personalizados">Arreglos Personalizados</Link></li>
+        </ul>
       </li>
       <li className="navigation__item">
         <Link

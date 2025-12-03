@@ -185,13 +185,65 @@ export default function MobileNav() {
       </li>
       <li className="navigation__item">
         <Link
-          href="/about"
+          href="/servicios"
           className={`navigation__link ${
-            pathname == "/about" ? "menu-active" : ""
+            pathname.startsWith("/servicios") ? "menu-active" : ""
           }`}
         >
           Servicios
         </Link>
+        <ul className="sub-menu__list list-unstyled mt-2">
+          <li className="sub-menu__item">
+            <Link href="/servicios/eventos-sociales" className="menu-link menu-link_us-s">
+              Eventos Sociales
+            </Link>
+          </li>
+          <li className="sub-menu__item">
+            <Link href="/servicios/bodas" className="menu-link menu-link_us-s">
+              Bodas
+            </Link>
+          </li>
+          <li className="sub-menu__item">
+            <Link href="/servicios/cumpleanos" className="menu-link menu-link_us-s">
+              Cumpleaños
+            </Link>
+          </li>
+          <li className="sub-menu__item">
+            <Link href="/servicios/10-de-mayo" className="menu-link menu-link_us-s">
+              10 de Mayo
+            </Link>
+          </li>
+          <li className="sub-menu__item">
+            <Link href="/servicios/dia-de-muertos" className="menu-link menu-link_us-s">
+              Día de Muertos
+            </Link>
+          </li>
+          <li className="sub-menu__item">
+            <Link href="/servicios/navidad" className="menu-link menu-link_us-s">
+              Navidad
+            </Link>
+          </li>
+          <li className="sub-menu__item">
+            <Link href="/servicios/hogar-y-oficina" className="menu-link menu-link_us-s">
+              Hogar y Oficina
+            </Link>
+          </li>
+          <li className="sub-menu__item">
+            <Link href="/servicios/empresarial" className="menu-link menu-link_us-s">
+              Empresarial
+            </Link>
+          </li>
+          <li className="sub-menu__item">
+            <Link href="/servicios/orquideas-premium" className="menu-link menu-link_us-s">
+              Orquídeas Premium
+            </Link>
+          </li>
+          <li className="sub-menu__item">
+            <Link href="/servicios/arreglos-personalizados" className="menu-link menu-link_us-s">
+              Arreglos Personalizados
+            </Link>
+          </li>
+        </ul>
       </li>
       <li className="navigation__item">
         <Link

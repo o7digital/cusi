@@ -73,7 +73,6 @@ export default function Nav() {
           CUSI
         </Link>
       </li>
-      <li className="navigation__item">
       <li className="navigation__item navigation__item_has-sub">
         <Link
           href="/servicios"

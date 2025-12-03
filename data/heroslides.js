@@ -1,23 +1,23 @@
 export const slides1 = [
   {
     id: 1,
-
-    characterImg: "/assets/images/slideshow-character1.png",
-    characterAlt: "Woman Fashion 1",
-    characterText: "Summer",
-    text1: "New Trend",
-    text2: "Summer Sale Stylish",
-    text3: "Womens",
+    backgroundImg: "/assets/images/home/florial/slider-1.jpg",
+    backgroundAlt: "Inspired by nature floral arrangement",
+    backgroundColor: "#f8f3ec",
+    text1: "Birthdays Gift",
+    text2: "Inspired",
+    text3: "By Nature",
+    ctaLabel: "Shop Now",
   },
   {
     id: 2,
-
-    characterImg: "/assets/images/slideshow-character2.png",
-    characterAlt: "Woman Fashion 2",
-    characterText: "",
-    text1: "Summer 2020",
-    text3: "Hello New Season",
-    text4: "Limited Time Offer - Up to 60% off & Free Shipping",
+    backgroundImg: "/assets/images/home/florial/slider-2.jpg",
+    backgroundAlt: "Fresh flowers and feeling love",
+    backgroundColor: "#d6dfe1",
+    text1: "Valentine Gift",
+    text2: "Fresh Flower",
+    text3: "& Feeling Love",
+    ctaLabel: "Shop Now",
   },
 ];
 export const slides2 = [

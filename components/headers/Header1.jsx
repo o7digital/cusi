@@ -6,7 +6,6 @@ import { openCart } from "@/utlis/openCart";
 import CartLength from "./components/CartLength";
 import Image from "next/image";
 import User from "./components/User";
-import SearchPopup from "./components/SearchPopup";
 
 export default function Header1() {
   const [scrollDirection, setScrollDirection] = useState("down");
@@ -72,10 +71,6 @@ export default function Header1() {
           {/* <!-- /.navigation --> */}
 
           <div className="header-tools d-flex align-items-center">
-            <SearchPopup />
-
-            {/* <!-- /.header-tools__item hover-container --> */}
-
             <div className="header-tools__item hover-container">
               <a className="header-tools__item js-open-aside" href="#">
                 <User />

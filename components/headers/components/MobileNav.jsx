@@ -155,55 +155,14 @@ export default function MobileNav() {
   return (
     <>
       <li className="navigation__item">
-        <a
-          href="#"
-          className={`navigation__link js-nav-right d-flex align-items-center ${
-            isActiveParentMenu(homePages) ? "menu-active" : ""
+        <Link
+          href="/"
+          className={`navigation__link ${
+            pathname == "/" ? "menu-active" : ""
           }`}
         >
-          Home
-          <svg
-            className="ms-auto"
-            width="7"
-            height="11"
-            viewBox="0 0 7 11"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use href="#icon_next_sm" />
-          </svg>
-        </a>
-        <div className="sub-menu position-absolute top-0 start-100 w-100 d-none">
-          <a
-            href="#"
-            className="navigation__link js-nav-left d-flex align-items-center border-bottom mb-2"
-          >
-            <svg
-              className="me-2"
-              width="7"
-              height="11"
-              viewBox="0 0 7 11"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <use href="#icon_prev_sm" />
-            </svg>
-            Home
-          </a>
-          <ul className="list-unstyled">
-            {homePages.map((elm, i) => (
-              <li key={i} className="sub-menu__item">
-                <Link
-                  href={elm.href}
-                  className={`menu-link menu-link_us-s ${
-                    isMenuActive(elm.href) ? "menu-active" : ""
-                  }`}
-                >
-                  {elm.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          {/* <!-- /.box-menu --> */}
-        </div>
+          Inicio
+        </Link>
       </li>
       <li className="navigation__item">
         <a
@@ -218,7 +177,7 @@ export default function MobileNav() {
               : ""
           }`}
         >
-          Shop
+          CUSI
           <svg
             className="ms-auto"
             width="7"
@@ -243,7 +202,7 @@ export default function MobileNav() {
             >
               <use href="#icon_prev_sm" />
             </svg>
-            Shop
+            CUSI
           </a>
           <div className="sub-menu__wrapper">
             <a
@@ -402,107 +361,15 @@ export default function MobileNav() {
       </li>
 
       <li className="navigation__item">
-        <a
-          href="#"
-          className={`navigation__link js-nav-right d-flex align-items-center ${
-            isActiveParentMenu(blogmenuItems) ? "menu-active" : ""
+        <Link
+          href="/shop-1"
+          className={`navigation__link ${
+            pathname.includes("/shop") || pathname.includes("/product") ? "menu-active" : ""
           }`}
         >
-          Blog
-          <svg
-            className="ms-auto"
-            width="7"
-            height="11"
-            viewBox="0 0 7 11"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use href="#icon_next_sm" />
-          </svg>
-        </a>
-        <div className="sub-menu position-absolute top-0 start-100 w-100 d-none">
-          <a
-            href="#"
-            className="navigation__link js-nav-left d-flex align-items-center border-bottom mb-2"
-          >
-            <svg
-              className="me-2"
-              width="7"
-              height="11"
-              viewBox="0 0 7 11"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <use href="#icon_prev_sm" />
-            </svg>
-            Blog
-          </a>
-          <ul className="list-unstyled">
-            {blogmenuItems.map((elm, i) => (
-              <li key={i} className="sub-menu__item">
-                <Link
-                  href={elm.href}
-                  className={`menu-link menu-link_us-s ${
-                    isMenuActive(elm.href) ? "menu-active" : ""
-                  }`}
-                >
-                  {elm.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+          Nuestras Flores
+        </Link>
       </li>
-
-      <li className="navigation__item">
-        <a
-          href="#"
-          className={`navigation__link js-nav-right d-flex align-items-center ${
-            isActiveParentMenu(othersMenuItems) ? "menu-active" : ""
-          }`}
-        >
-          Pages
-          <svg
-            className="ms-auto"
-            width="7"
-            height="11"
-            viewBox="0 0 7 11"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use href="#icon_next_sm" />
-          </svg>
-        </a>
-        <div className="sub-menu position-absolute top-0 start-100 w-100 d-none">
-          <a
-            href="#"
-            className="navigation__link js-nav-left d-flex align-items-center border-bottom mb-2"
-          >
-            <svg
-              className="me-2"
-              width="7"
-              height="11"
-              viewBox="0 0 7 11"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <use href="#icon_prev_sm" />
-            </svg>
-            Pages
-          </a>
-          <ul className="list-unstyled">
-            {othersMenuItems.map((elm, i) => (
-              <li key={i} className="sub-menu__item">
-                <Link
-                  href={elm.href}
-                  className={`menu-link menu-link_us-s ${
-                    isMenuActive(elm.href) ? "menu-active" : ""
-                  }`}
-                >
-                  {elm.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </li>
-
       <li className="navigation__item">
         <Link
           href="/about"
@@ -510,7 +377,7 @@ export default function MobileNav() {
             pathname == "/about" ? "menu-active" : ""
           }`}
         >
-          About
+          Servicios
         </Link>
       </li>
       <li className="navigation__item">
@@ -520,7 +387,7 @@ export default function MobileNav() {
             pathname == "/contact" ? "menu-active" : ""
           }`}
         >
-          Contact
+          Contacto
         </Link>
       </li>
     </>

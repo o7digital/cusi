@@ -27,33 +27,7 @@ export default function Header12() {
             </div>
             {/* <!-- /.logo --> */}
 
-            <form
-              onSubmit={(e) => e.preventDefault()}
-              className="header-search search-field"
-            >
-              <input
-                className="header-search__input w-100"
-                type="text"
-                name="search-keyword"
-                placeholder="Search products..."
-              />
-              <CategorySelect />
-              <button className="btn header-search__btn" type="submit">
-                <svg
-                  className="d-block"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use href="#icon_search" />
-                </svg>
-              </button>
-            </form>
-            {/* <!-- /.header-search --> */}
-
-            <div className="header-tools d-flex align-items-center">
+            <div className="header-tools d-flex align-items-center ms-auto">
               <div className="header-tools__item hover-container">
                 <a className="header-tools__item js-open-aside" href="#">
                   <User />
@@ -89,25 +63,6 @@ export default function Header12() {
                 <span className="cart-amount d-block position-absolute js-cart-items-count theme-bg-color">
                   <CartLength />
                 </span>
-              </a>
-
-              <a
-                className="header-tools__item"
-                href="#"
-                data-bs-toggle="modal"
-                data-bs-target="#siteMap"
-              >
-                <svg
-                  className="nav-icon"
-                  width="25"
-                  height="18"
-                  viewBox="0 0 25 18"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect width="25" height="2" />
-                  <rect y="8" width="20" height="2" />
-                  <rect y="16" width="25" height="2" />
-                </svg>
               </a>
             </div>
             {/* <!-- /.header__tools --> */}

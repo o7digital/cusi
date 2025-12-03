@@ -45,7 +45,7 @@ export default function Blogs() {
         <div className="mb-3 mb-xl-5 pb-3 pt-1 pb-xl-5"></div>
 
         <div className="d-flex align-items-center justify-content-center justify-content-md-between flex-wrap mb-3 pb-xl-2 mb-xl-4 gap-4">
-          <h2 className="section-title fw-normal">Latest in Blog</h2>
+          <h2 className="section-title fw-normal">Nuestras ultimas norticias</h2>
           <Link
             className="btn-link btn-link_md default-underline text-uppercase fw-medium"
             href="/blog_list1"

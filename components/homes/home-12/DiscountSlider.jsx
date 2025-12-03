@@ -47,7 +47,7 @@ export default function DiscountSlider() {
   return (
     <section className="discount-carousel container">
       <div className="d-flex align-items-center justify-content-center justify-content-md-between flex-wrap mb-3 pb-xl-2 mb-xl-4 gap-4">
-        <h2 className="section-title fw-normal">Discount</h2>
+        <h2 className="section-title fw-normal">Promociones y Ofertas</h2>
       </div>
 
       <div className="row">

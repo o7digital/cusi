@@ -50,3 +50,58 @@
 .theme-12 .header-bottom .header-tools svg {
   fill: #333333 !important; /* Foncé sur fond clair */
 }
+
+.top-categories {
+  background: #ffffff;
+}
+
+.top-categories__underline {
+  width: 78px;
+  height: 3px;
+  background: linear-gradient(90deg, #e34a6f 0%, #f5b7c9 100%);
+  border-radius: 999px;
+}
+
+.top-category-card {
+  color: #1f1f1f;
+  transition: transform 180ms ease, color 180ms ease;
+}
+
+.top-category-card__media {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 2px solid #e8e2d8;
+  overflow: hidden;
+  background: #fffaf7;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-category-card__media img {
+  width: 100%;
+  height: 100%;
+  transition: transform 220ms ease;
+}
+
+.top-category-card:hover {
+  transform: translateY(-6px);
+  color: #0f0f0f;
+}
+
+.top-category-card:hover .top-category-card__media img {
+  transform: scale(1.05);
+}
+
+.top-category-card__label {
+  color: #1c1c1c;
+}
+
+@media (max-width: 575.98px) {
+  .top-category-card__media {
+    width: 130px;
+    height: 130px;
+  }
+}

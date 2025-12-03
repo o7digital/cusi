@@ -392,7 +392,24 @@ export const slidesData7 = [
     subtitle1: "Handcrafted floral arrangements",
     subtitle2: "Delivered with care",
   },
-  // Add more slide data objects as needed
+  {
+    id: 2,
+    backgroundColor: "#fef3f6",
+    imageUrl: "/assets/images/home/florial/slider-1.jpg",
+    imageAlt: "Florial signature bouquet assortment",
+    title: "Flores para cada ocasión",
+    subtitle1: "Compositions élégantes inspirées du site Florial",
+    subtitle2: "Prêtes à être offertes",
+  },
+  {
+    id: 3,
+    backgroundColor: "#f7f9fb",
+    imageUrl: "/assets/images/home/florial/slider-2.jpg",
+    imageAlt: "Fresh rose and lily bouquet from Florial",
+    title: "Livraison le jour même",
+    subtitle1: "Sélection fraîche et colorée",
+    subtitle2: "Une touche florale pour vos proches",
+  },
 ];
 
 export const slideData8 = [

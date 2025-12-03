@@ -20,15 +20,15 @@ export default function Footer1() {
                 Flores premium y productos de estilo de vida activo para todos.
               </p>
               <p className="footer-address" style={{color: '#aaa', fontSize: '14px'}}>
-                1418 River Drive, Suite 35<br />
-                Cottonhall, CA 9622<br />
-                United States
+                Calle Monte Carpatos 990 Int 2<br />
+                Colonia Lomas de Virreyes<br />
+                CP 11000 CDMX México
               </p>
               <p className="m-0" style={{color: '#aaa', fontSize: '14px'}}>
-                <strong className="fw-medium">contact@dosalga.mx</strong>
+                <strong className="fw-medium">ventas@cusiflores.com</strong>
               </p>
               <p style={{color: '#aaa', fontSize: '14px'}}>
-                <strong className="fw-medium">+33 X XX XX XX XX</strong>
+                <strong className="fw-medium">+52 15521092665</strong>
               </p>
               <ul className="social-links list-unstyled d-flex flex-wrap mb-0 mt-3">
                 {socialLinks.map((link, index) => (
@@ -66,13 +66,13 @@ export default function Footer1() {
                   <Link href="/about" style={{color: '#aaa', textDecoration: 'none', fontSize: '14px'}}>Servicios</Link>
                 </li>
                 <li className="mb-2">
-                  <Link href="/about" style={{color: '#aaa', textDecoration: 'none', fontSize: '14px'}}>Afiliados</Link>
+                  <Link href="/contact" style={{color: '#aaa', textDecoration: 'none', fontSize: '14px'}}>Contacto</Link>
                 </li>
                 <li className="mb-2">
-                  <Link href="/blog_list1" style={{color: '#aaa', textDecoration: 'none', fontSize: '14px'}}>Blog</Link>
+                  <Link href="/terms" style={{color: '#aaa', textDecoration: 'none', fontSize: '14px'}}>Aviso de Privacidad</Link>
                 </li>
                 <li className="mb-2">
-                  <Link href="/contact" style={{color: '#aaa', textDecoration: 'none', fontSize: '14px'}}>Contáctenos</Link>
+                  <Link href="/contact" style={{color: '#aaa', textDecoration: 'none', fontSize: '14px'}}>Contáctanos</Link>
                 </li>
               </ul>
             </div>
@@ -85,44 +85,11 @@ export default function Footer1() {
                 <li className="mb-2">
                   <Link href="/shop-1" style={{color: '#aaa', textDecoration: 'none', fontSize: '14px'}}>Nuevos Productos</Link>
                 </li>
-                <li className="mb-2">
-                  <Link href="/shop-1" style={{color: '#aaa', textDecoration: 'none', fontSize: '14px'}}>Accesorios</Link>
-                </li>
-                <li className="mb-2">
-                  <Link href="/shop-1" style={{color: '#aaa', textDecoration: 'none', fontSize: '14px'}}>Hombres</Link>
-                </li>
-                <li className="mb-2">
-                  <Link href="/shop-1" style={{color: '#aaa', textDecoration: 'none', fontSize: '14px'}}>Mujeres</Link>
-                </li>
-                <li className="mb-2">
-                  <Link href="/shop-1" style={{color: '#aaa', textDecoration: 'none', fontSize: '14px'}}>Ver Todo</Link>
-                </li>
               </ul>
             </div>
           </div>
 
-          <div className="col-lg-2 col-md-6">
-            <div className="footer-widget">
-              <h6 className="text-uppercase mb-3" style={{color: '#fff', fontSize: '14px', fontWeight: '600'}}>AYUDA</h6>
-              <ul className="list-unstyled">
-                <li className="mb-2">
-                  <Link href="/about" style={{color: '#aaa', textDecoration: 'none', fontSize: '14px'}}>Servicio al Cliente</Link>
-                </li>
-                <li className="mb-2">
-                  <Link href="/account_dashboard" style={{color: '#aaa', textDecoration: 'none', fontSize: '14px'}}>Mi Cuenta</Link>
-                </li>
-                <li className="mb-2">
-                  <Link href="/terms" style={{color: '#aaa', textDecoration: 'none', fontSize: '14px'}}>Legal y Privacidad</Link>
-                </li>
-                <li className="mb-2">
-                  <Link href="/contact" style={{color: '#aaa', textDecoration: 'none', fontSize: '14px'}}>Contacto</Link>
-                </li>
-                <li className="mb-2">
-                  <Link href="/about" style={{color: '#aaa', textDecoration: 'none', fontSize: '14px'}}>Tarjeta de Regalo</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
+
 
           <div className="col-lg-2 col-md-6">
             <div className="footer-widget">

@@ -29,15 +29,19 @@ export default function Footer11() {
               </Link>
             </div>
             {/* <!-- /.logo --> */}
-            <p className="footer-address">
-              1418 River Drive, Suite 35 Cottonhall, CA 9622 United States
+            <p className="footer-address text-lowercase">
+              calle monte carpatos 990 int 2
+              <br />
+              colonia lomas virreyes
+              <br />
+              11000, cdmx, mx
             </p>
 
             <p className="m-0">
               <strong className="fw-medium">sale@uomo.com</strong>
             </p>
             <p>
-              <strong className="fw-medium">+1 246-345-0695</strong>
+              <strong className="fw-medium">+52 15521092665</strong>
             </p>
 
             <ul className="social-links list-unstyled d-flex flex-wrap mb-0">

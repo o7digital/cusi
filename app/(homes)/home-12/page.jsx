@@ -1,5 +1,3 @@
-import Footer11 from "@/components/footers/Footer11";
-
 import Header12 from "@/components/headers/Header12";
 import Blogs from "@/components/homes/home-12/Blogs";
 import DiscountSlider from "@/components/homes/home-12/DiscountSlider";
@@ -28,8 +26,7 @@ export default function HomePage12() {
           <DiscountSlider />
           <div className="mb-3 mb-xl-5 pb-3 pt-1 pb-xl-5"></div>
           <Blogs />
-        </main>{" "}
-        <Footer11 />
+        </main>
       </div>
     </>
   );

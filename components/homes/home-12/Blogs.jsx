@@ -40,7 +40,7 @@ export default function Blogs() {
     },
   };
   return (
-    <section className="category-carousel bg-grey-f7f5ee">
+    <section className="category-carousel">
       <div className="container">
         <div className="mb-3 mb-xl-5 pb-3 pt-1 pb-xl-5"></div>
 

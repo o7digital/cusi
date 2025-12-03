@@ -175,16 +175,6 @@ export default function MobileNav() {
 
       <li className="navigation__item">
         <Link
-          href="/shop-1"
-          className={`navigation__link ${
-            pathname.includes("/shop") || pathname.includes("/product") ? "menu-active" : ""
-          }`}
-        >
-          Nuestras Flores
-        </Link>
-      </li>
-      <li className="navigation__item">
-        <Link
           href="/servicios"
           className={`navigation__link ${
             pathname.startsWith("/servicios") ? "menu-active" : ""

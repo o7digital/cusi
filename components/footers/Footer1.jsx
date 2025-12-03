@@ -170,7 +170,7 @@ export default function Footer1() {
         <div className="row mt-5 pt-4" style={{borderTop: '1px solid #333'}}>
           <div className="col-12 d-flex flex-md-row flex-column align-items-center justify-content-between">
             <div className="footer-copyright" style={{color: '#aaa', fontSize: '14px'}}>
-              ©{new Date().getFullYear()} Dosalga | Diseño por <a href="https://o7digital.com/" style={{color: '#fff', textDecoration: 'none'}}>o7Digital</a>
+              ©{new Date().getFullYear()} CUSI | Diseño por <a href="https://o7digital.com/" style={{color: '#fff', textDecoration: 'none'}}>o7Digital</a>
             </div>
             <div className="d-flex align-items-center mt-3 mt-md-0">
               <Image

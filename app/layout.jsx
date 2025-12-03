@@ -22,6 +22,7 @@ import ShopFilter from "@/components/asides/ShopFilter";
 import ProductDescription from "@/components/asides/ProductDescription";
 import ProductAdditionalInformation from "@/components/asides/ProductAdditionalInformation";
 import ProductReviews from "@/components/asides/ProductReviews";
+import Footer1 from "@/components/footers/Footer1";
 import MobileFooter1 from "@/components/footers/MobileFooter1";
 
 export default function RootLayout({ children }) {
@@ -95,7 +96,12 @@ export default function RootLayout({ children }) {
         <Context>
           <MobileHeader />
           {children}
-          <MobileFooter1 />
+          <div className="d-none d-md-block">
+            <Footer1 />
+          </div>
+          <div className="d-block d-md-none">
+            <MobileFooter1 />
+          </div>
           {/* //modals and asides */}
           <LoginFormPopup />
           <QuickView />

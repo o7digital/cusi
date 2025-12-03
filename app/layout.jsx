@@ -90,6 +90,14 @@ export default function RootLayout({ children }) {
           href="/assets/css/custom-slider-text.css"
           rel="stylesheet"
         />
+        <style>{`
+          /* Hide Vercel banner/button */
+          [data-vercel-toolbar],
+          [data-vercel-speed-insights-toolbar],
+          iframe[src*="vercel.live"] {
+            display: none !important;
+          }
+        `}</style>
       </head>
       <body>
         <Svgs />

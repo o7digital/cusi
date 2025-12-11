@@ -1,10 +1,9 @@
 import Header12 from "@/components/headers/Header12";
-import Blogs from "@/components/homes/home-12/Blogs";
-import DiscountSlider from "@/components/homes/home-12/DiscountSlider";
 import Featured from "@/components/homes/home-12/Featured";
 import Features from "@/components/homes/home-12/Features";
 import Hero from "@/components/homes/home-12/Hero";
 import TopCategoriesFlorial from "@/components/homes/home-12/TopCategoriesFlorial";
+import Offers from "@/components/homes/home-12/Offers";
 import React from "react";
 
 export const metadata = {
@@ -23,9 +22,7 @@ export default function HomePage12() {
           <div className="mb-3 mb-xl-5 pb-3 pt-1 pb-xl-5"></div>
           <Featured />
           <div className="mb-3 mb-xl-4 pb-3 pt-1 pb-xl-5"></div>
-          <DiscountSlider />
-          <div className="mb-3 mb-xl-5 pb-3 pt-1 pb-xl-5"></div>
-          <Blogs />
+          <Offers />
         </main>
       </div>
     </>

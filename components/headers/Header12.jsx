@@ -28,6 +28,9 @@ export default function Header12() {
             {/* <!-- /.logo --> */}
 
             <div className="header-tools d-flex align-items-center ms-auto">
+              <Link href="/shop-1" className="header-offer-btn me-3">
+                Ofertas
+              </Link>
               <div className="header-tools__item hover-container">
                 <a className="header-tools__item js-open-aside" href="#">
                   <User />

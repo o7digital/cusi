@@ -3,9 +3,8 @@ import React from "react";
 
 export default function Features() {
   return (
-    <section className="service-promotion horizontal bg-grey-f7f5ee">
+    <section className="service-promotion horizontal service-promotion--compact bg-grey-f7f5ee">
       <div className="container">
-        <div className="pb-2"></div>
         <div className="row">
           {servicesData.map((elm, i) => (
             <div
@@ -38,7 +37,6 @@ export default function Features() {
           {/* <!-- /.col-md-6.col-xl-3 --> */}
         </div>
         {/* <!-- /.row --> */}
-        <div className="pb-2"></div>
       </div>
     </section>
   );

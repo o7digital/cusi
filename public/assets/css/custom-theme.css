@@ -252,23 +252,31 @@
 }
 
 .header-offer-btn {
-  background: linear-gradient(120deg, #ff6b6b 0%, #ffb347 100%);
+  background: linear-gradient(120deg, #ff4d6d 0%, #ffb347 100%);
   color: #ffffff !important;
-  font-weight: 800;
-  letter-spacing: 0.04em;
+  font-weight: 900;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 9px 16px;
+  padding: 12px 20px;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
-  box-shadow: 0 10px 28px rgba(255, 128, 110, 0.35);
+  gap: 8px;
+  box-shadow: 0 12px 30px rgba(255, 128, 110, 0.4);
   animation: offerPulse 1.6s ease-in-out infinite;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .header-offer-btn:hover {
   color: #ffffff !important;
-  transform: translateY(-1px) scale(1.01);
-  box-shadow: 0 12px 32px rgba(255, 128, 110, 0.45);
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 14px 34px rgba(255, 128, 110, 0.5);
+}
+
+.header-offer-btn--nav {
+  padding: 12px 22px;
+  font-size: 0.95rem;
+  line-height: 1.1;
 }
 
 @keyframes offerPulse {

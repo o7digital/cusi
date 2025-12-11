@@ -9,7 +9,9 @@ export default function TopCategoriesFlorial() {
     <section className="top-categories py-5">
       <div className="container">
         <div className="text-center mb-4 mb-md-5">
-          <h2 className="section-title fw-normal">Filtrado por Categorias</h2>
+          <h2 className="section-title fw-normal">
+            Selectionar su Preferencia
+          </h2>
           <div className="top-categories__underline mx-auto"></div>
         </div>
 

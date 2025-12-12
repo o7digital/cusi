@@ -7,29 +7,17 @@ export default function NewsLetter() {
   const modalElement = useRef();
   useEffect(() => {
     const bootstrap = require("bootstrap"); // dynamically import bootstrap
-    const modalNode = modalElement.current;
-    if (!modalNode) return;
+    var myModal = new bootstrap.Modal(
+      document.getElementById("newsletterPopup"),
+      {
+        keyboard: false,
+      }
+    );
 
-    const hasDismissed = localStorage.getItem("newsletterDismissed") === "true";
-    const modalInstance = new bootstrap.Modal(modalNode, {
-      keyboard: false,
+    myModal.show();
+    modalElement.current.addEventListener("hidden.bs.modal", () => {
+      myModal.hide();
     });
-
-    if (!hasDismissed) {
-      modalInstance.show();
-    }
-
-    const handleHidden = () => {
-      localStorage.setItem("newsletterDismissed", "true");
-      modalInstance.hide();
-    };
-
-    modalNode.addEventListener("hidden.bs.modal", handleHidden);
-
-    return () => {
-      modalNode.removeEventListener("hidden.bs.modal", handleHidden);
-      modalInstance.dispose();
-    };
   }, []);
 
   return (

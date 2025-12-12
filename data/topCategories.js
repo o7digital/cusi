@@ -2,7 +2,7 @@ export const topCategoriesFlorial = [
   {
     id: 1,
     name: "10 de Mayo",
-    imageSrc: "/assets/images/home/florial/slider-2.jpg",
+    imageSrc: "/assets/images/home/florial/category-birthday.jpg",
     objectPosition: "center",
     href: "/servicios/10-de-mayo",
   },
@@ -23,7 +23,7 @@ export const topCategoriesFlorial = [
   {
     id: 4,
     name: "Navidad",
-    imageSrc: "/assets/images/home/florial/slider-1.jpg",
+    imageSrc: "/assets/images/home/florial/category-sympathy.jpg",
     objectPosition: "center",
     href: "/servicios/navidad",
   },

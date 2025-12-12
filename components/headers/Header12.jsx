@@ -78,7 +78,7 @@ export default function Header12() {
                 <li className="navigation__item">
                   <Link
                     href="/shop-1"
-                    className="navigation__link"
+                    className="navigation__link navigation__link--ofertas"
                   >
                     Ofertas
                   </Link>

@@ -140,6 +140,23 @@
   color: #000000;
 }
 
+.navigation__link--ofertas {
+  background: linear-gradient(120deg, #f9d65c 0%, #f7a928 100%);
+  color: #ffffff !important;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  box-shadow: 0 10px 24px rgba(247, 169, 40, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.navigation__link--ofertas:hover {
+  color: #ffffff !important;
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(247, 169, 40, 0.45);
+}
+
 .offers-flowers {
   background: linear-gradient(180deg, #ffffff 0%, #fff8f2 100%);
   border-radius: 28px;

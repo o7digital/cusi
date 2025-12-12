@@ -7,6 +7,7 @@ export const offersFlowers = [
     tag: "Oferta flash",
     imageSrc: "/assets/images/home/florial/slider-1.jpg",
     href: "/shop-1",
+    price: "$890.00",
     variant: "wide",
   },
   {
@@ -17,6 +18,7 @@ export const offersFlowers = [
     tag: "Envío gratis",
     imageSrc: "/assets/images/home/florial/slider-2.jpg",
     href: "/shop-1",
+    price: "$1,050.00",
   },
   {
     id: 3,
@@ -26,6 +28,7 @@ export const offersFlowers = [
     tag: "Pack especial",
     imageSrc: "/assets/images/home/florial/category-wedding.jpg",
     href: "/shop-1",
+    price: "$1,250.00",
   },
   {
     id: 4,
@@ -35,5 +38,6 @@ export const offersFlowers = [
     tag: "Código FIESTA",
     imageSrc: "/assets/images/home/florial/category-birthday.jpg",
     href: "/shop-1",
+    price: "$720.00",
   },
 ];

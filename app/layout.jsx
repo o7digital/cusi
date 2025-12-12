@@ -13,7 +13,7 @@ import QuickView from "@/components/modals/QuickView";
 import CartDrawer from "@/components/shopCartandCheckout/CartDrawer";
 import SiteMap from "@/components/modals/SiteMap";
 import NewsLetter from "@/components/modals/NewsLetter";
-import CookieContainer from "@/components/common/CookieContainer";
+
 import MobileHeader from "@/components/headers/MobileHeader";
 import SizeGuide from "@/components/modals/SizeGuide";
 import Delivery from "@/components/modals/Delivery";
@@ -114,7 +114,6 @@ export default function RootLayout({ children }) {
           <LoginFormPopup />
           <QuickView />
           <NewsLetter />
-          <CookieContainer />
           <SizeGuide />
           <Delivery />
           <CartDrawer />

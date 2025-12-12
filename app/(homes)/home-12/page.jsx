@@ -4,6 +4,8 @@ import Features from "@/components/homes/home-12/Features";
 import Hero from "@/components/homes/home-12/Hero";
 import TopCategoriesFlorial from "@/components/homes/home-12/TopCategoriesFlorial";
 import Offers from "@/components/homes/home-12/Offers";
+import Testimonials from "@/components/homes/home-12/Testimonials";
+import ComplicesSection from "@/components/homes/home-12/ComplicesSection";
 import React from "react";
 
 export const metadata = {
@@ -23,6 +25,10 @@ export default function HomePage12() {
           <Featured />
           <div className="mb-3 mb-xl-4 pb-3 pt-1 pb-xl-5"></div>
           <Offers />
+          <div className="mb-3 mb-xl-5 pb-3 pt-1 pb-xl-5"></div>
+          <Testimonials />
+          <div className="mb-3 mb-xl-4 pb-3 pt-1 pb-xl-5"></div>
+          <ComplicesSection />
         </main>
       </div>
     </>

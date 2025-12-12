@@ -109,3 +109,36 @@ export const testimonials2 = [
     },
   },
 ];
+
+export const testimonialsFloral = [
+  {
+    id: 1,
+    name: "Teresa Maldonado",
+    text: "Es como si hubieran leído mi mente para dar el regalo perfecto.",
+    rating: 5,
+  },
+  {
+    id: 2,
+    name: "Rosario Cervantes",
+    text: "Aún para momentos difíciles, es extraordinaria la belleza de los arreglos de CUSI.",
+    rating: 5,
+  },
+  {
+    id: 3,
+    name: "Andrea Montes",
+    text: "Me robó el corazón, el alma y todas las sonrisas del mundo.",
+    rating: 5,
+  },
+  {
+    id: 4,
+    name: "Carlos Hernández",
+    text: "La frescura de las flores y la presentación impecable superaron mis expectativas.",
+    rating: 5,
+  },
+  {
+    id: 5,
+    name: "María Gonzalez",
+    text: "Entrega puntual y arreglo hermoso. Definitivamente volveré a comprar.",
+    rating: 5,
+  },
+];

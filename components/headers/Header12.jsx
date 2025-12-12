@@ -28,9 +28,6 @@ export default function Header12() {
             {/* <!-- /.logo --> */}
 
             <div className="header-tools d-flex align-items-center ms-auto">
-              <Link href="/shop-1" className="header-offer-btn me-3">
-                Ofertas
-              </Link>
               <div className="header-tools__item hover-container">
                 <a className="header-tools__item js-open-aside" href="#">
                   <User />
@@ -74,10 +71,18 @@ export default function Header12() {
         {/* <!-- /.header-top --> */}
 
         <div className="header-bottom theme-bg-color">
-          <div className="container d-flex align-items-center">
+          <div className="container d-flex align-items-center justify-content-center">
             <nav className="navigation">
-              <ul className="navigation__list list-unstyled d-flex">
+              <ul className="navigation__list list-unstyled d-flex justify-content-center align-items-center gap-2">
                 <Nav />
+                <li className="navigation__item">
+                  <Link
+                    href="/shop-1"
+                    className="navigation__link"
+                  >
+                    Ofertas
+                  </Link>
+                </li>
               </ul>
               {/* <!-- /.navigation__list --> */}
             </nav>

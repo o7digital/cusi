@@ -1,6 +1,6 @@
 import Header12 from "@/components/headers/Header12";
 import Featured from "@/components/homes/home-12/Featured";
-import Features from "@/components/homes/home-12/Features";
+// import Features from "@/components/homes/home-12/Features";
 import Hero from "@/components/homes/home-12/Hero";
 import TopCategoriesFlorial from "@/components/homes/home-12/TopCategoriesFlorial";
 import Offers from "@/components/homes/home-12/Offers";
@@ -19,7 +19,7 @@ export default function HomePage12() {
         <Header12 />
         <main>
           <Hero />
-          <Features />
+          {/* <Features /> */}
           <TopCategoriesFlorial />
           <div className="mb-3 mb-xl-5 pb-3 pt-1 pb-xl-5"></div>
           <Featured />

@@ -113,7 +113,7 @@ export default function RootLayout({ children }) {
           {/* //modals and asides */}
           <LoginFormPopup />
           <QuickView />
-          <NewsLetter />
+          {/* <NewsLetter /> */}
           <SizeGuide />
           <Delivery />
           <CartDrawer />

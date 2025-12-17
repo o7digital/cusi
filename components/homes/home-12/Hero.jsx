@@ -12,12 +12,15 @@ export default function Hero() {
     <div className="position-relative overflow-hidden" style={{ height: '800px' }}>
       {/* Background Image */}
       <div className="position-absolute top-0 start-0 w-100 h-100">
-        <Image
+        <img
           src="/slider/gemini-noche-buena.png"
-          fill
           alt="Felices Fiestas 2025"
-          className="object-fit-cover"
-          priority
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center 40%'
+          }}
         />
       </div>
       

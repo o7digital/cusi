@@ -1,11 +1,46 @@
 "use client";
-import Link from "next/link";
-
-import { slidesData7 } from "@/data/heroslides";
-import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 
+// SLIDER CODE ON HOLD - Temporarily disabled for holiday season
+// import Link from "next/link";
+// import { slidesData7 } from "@/data/heroslides";
+// import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
+// import { Swiper, SwiperSlide } from "swiper/react";
+
+export default function Hero() {
+  return (
+    <div className="position-relative overflow-hidden" style={{ height: '800px' }}>
+      {/* Background Image */}
+      <div className="position-absolute top-0 start-0 w-100 h-100">
+        <Image
+          src="/images/slider/gemini-noche-buena.png"
+          fill
+          alt="Felices Fiestas 2025"
+          className="object-fit-cover"
+          priority
+        />
+      </div>
+      
+      {/* Title on the right */}
+      <div className="position-absolute top-50 end-0 translate-middle-y me-5 me-lg-8 pe-3 pe-lg-5">
+        <h1 
+          className="fw-bold text-white text-end" 
+          style={{ 
+            fontSize: 'clamp(3rem, 8vw, 6rem)',
+            lineHeight: '1',
+            textShadow: '2px 2px 8px rgba(0,0,0,0.5)',
+            letterSpacing: '0.02em'
+          }}
+        >
+          FELICES<br />FIESTAS<br />2025
+        </h1>
+      </div>
+    </div>
+  );
+}
+
+// ORIGINAL SLIDER CODE (ON HOLD)
+/*
 export default function Hero() {
   const swiperOptions = {
     autoplay: {
@@ -80,7 +115,6 @@ export default function Hero() {
           </div>
         </SwiperSlide>
       ))}
-      {/* <!-- /.slideshow-wrapper js-swiper-slider --> */}
 
       <div className="cursor-pointer slideshow__prev position-absolute top-50 d-flex align-items-center justify-content-center">
         <svg
@@ -92,7 +126,6 @@ export default function Hero() {
           <use href="#icon_prev_sm" />
         </svg>
       </div>
-      {/* <!-- /.slideshow__prev --> */}
       <div className="cursor-pointer slideshow__next position-absolute top-50 d-flex align-items-center justify-content-center">
         <svg
           width="7"
@@ -103,13 +136,11 @@ export default function Hero() {
           <use href="#icon_next_sm" />
         </svg>
       </div>
-      {/* <!-- /.slideshow__next --> */}
 
       <div className="container">
         <div className="slideshow-pagination d-flex align-items-center position-absolute bottom-0 mb-5"></div>
-        {/* <!-- /.products-pagination --> */}
       </div>
-      {/* <!-- /.container --> */}
     </Swiper>
   );
 }
+*/

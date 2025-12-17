@@ -13,7 +13,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="position-absolute top-0 start-0 w-100 h-100">
         <Image
-          src="/images/slider/gemini-noche-buena.png"
+          src="/slider/gemini-noche-buena.png"
           fill
           alt="Felices Fiestas 2025"
           className="object-fit-cover"
@@ -21,10 +21,10 @@ export default function Hero() {
         />
       </div>
       
-      {/* Title on the right */}
-      <div className="position-absolute top-50 end-0 translate-middle-y me-5 me-lg-8 pe-3 pe-lg-5">
+      {/* Title on the left */}
+      <div className="position-absolute top-50 start-0 translate-middle-y ms-5 ms-lg-8 ps-3 ps-lg-5">
         <h1 
-          className="fw-bold text-white text-end" 
+          className="fw-bold text-white" 
           style={{ 
             fontSize: 'clamp(3rem, 8vw, 6rem)',
             lineHeight: '1',

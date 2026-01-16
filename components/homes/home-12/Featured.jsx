@@ -5,6 +5,13 @@ import { products25 } from "@/data/products/grocery";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 const filterCategories = ["All", "Most Popular", "Best Rated"];
+const sortOptions = [
+  { value: "id-asc", label: "Ordre inverse" },
+  { value: "rating-desc", label: "Les mieux notées" },
+  { value: "price-desc", label: "Plus cher → moins cher" },
+  { value: "price-asc", label: "Moins cher → plus cher" },
+  { value: "category", label: "Par catégorie" },
+];
 import Image from "next/image";
 
 export default function Featured() {
@@ -14,6 +21,7 @@ export default function Featured() {
   const [currentCategory, setCurrentCategory] = useState(filterCategories[0]);
   const [products, setProducts] = useState([]);
   const [filtered, setFiltered] = useState([]);
+  const [sortBy, setSortBy] = useState("id-asc");
 
   const decodeHTML = (value) => {
     if (!value) return "";
@@ -38,6 +46,23 @@ export default function Featured() {
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     });
+
+  const sortProducts = (list, mode) => {
+    const cloned = [...list];
+    switch (mode) {
+      case "rating-desc":
+        return cloned.sort((a, b) => b.rating - a.rating);
+      case "price-desc":
+        return cloned.sort((a, b) => b.price - a.price);
+      case "price-asc":
+        return cloned.sort((a, b) => a.price - b.price);
+      case "category":
+        return cloned.sort((a, b) => a.category.localeCompare(b.category));
+      case "id-asc":
+      default:
+        return cloned.sort((a, b) => a.id - b.id);
+    }
+  };
 
   useEffect(() => {
     let active = true;
@@ -67,7 +92,7 @@ export default function Featured() {
               filterCategory: rating >= 4.8 ? "Best Rated" : "Most Popular",
             };
           })
-          .sort((a, b) => b.id - a.id); // newest first
+          .sort((a, b) => a.id - b.id); // oldest first so Letras passe en dernier
         if (active) {
           setProducts(mapped);
           setFiltered(mapped);
@@ -88,43 +113,64 @@ export default function Featured() {
 
   useEffect(() => {
     if (currentCategory == "All") {
-      setFiltered([...products].sort((a, b) => b.id - a.id));
+      setFiltered(sortProducts(products, sortBy));
     } else {
       setFiltered(
-        products
-          .filter((elm) => elm.filterCategory == currentCategory)
-          .sort((a, b) => b.id - a.id)
+        sortProducts(
+          products.filter((elm) => elm.filterCategory == currentCategory),
+          sortBy
+        )
       );
     }
-  }, [currentCategory, products]);
+  }, [currentCategory, products, sortBy]);
   return (
     <section className="products-grid">
       <div className="container-fluid px-3 px-lg-4 px-xxl-5">
-        <div className="d-flex align-items-center justify-content-center justify-content-md-between flex-wrap mb-3 pb-xl-2 mb-xl-4 gap-4">
-          <h2 className="section-title fw-normal">Nuestros Arreglos</h2>
+        <div className="d-flex align-items-center justify-content-center justify-content-md-between flex-wrap mb-3 pb-xl-2 mb-xl-4 gap-3 gap-lg-4">
+          <h2 className="section-title fw-normal mb-0">Nuestros Arreglos</h2>
 
-          <ul
-            className="nav nav-tabs justify-content-center"
-            id="collections-1-tab"
-            role="tablist"
-          >
-            {filterCategories.map((elm, i) => (
-              <li
-                onClick={() => setCurrentCategory(elm)}
-                key={i}
-                className="nav-item"
-                role="presentation"
-              >
-                <a
-                  className={`nav-link nav-link_underscore ${
-                    currentCategory == elm ? "active" : ""
-                  }`}
+          <div className="d-flex align-items-center flex-wrap gap-3">
+            <ul
+              className="nav nav-tabs justify-content-center"
+              id="collections-1-tab"
+              role="tablist"
+            >
+              {filterCategories.map((elm, i) => (
+                <li
+                  onClick={() => setCurrentCategory(elm)}
+                  key={i}
+                  className="nav-item"
+                  role="presentation"
                 >
-                  {elm}
-                </a>
-              </li>
-            ))}
-          </ul>
+                  <a
+                    className={`nav-link nav-link_underscore ${
+                      currentCategory == elm ? "active" : ""
+                    }`}
+                  >
+                    {elm}
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <div className="d-flex align-items-center gap-2">
+              <label className="text-secondary small mb-0" htmlFor="sort-by">
+                Trier:
+              </label>
+              <select
+                id="sort-by"
+                className="form-select form-select-sm"
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+              >
+                {sortOptions.map((opt) => (
+                  <option key={opt.value} value={opt.value}>
+                    {opt.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
         </div>
 
         <div className="tab-content pt-2" id="collections-2-tab-content">

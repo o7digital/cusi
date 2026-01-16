@@ -5,14 +5,13 @@ import Nav from "./components/Nav";
 import { openCart } from "@/utlis/openCart";
 import Image from "next/image";
 import User from "./components/User";
-import CategorySelect from "./components/CategorySelect";
 
 export default function Header12() {
   return (
     <header id="header" className="header header_sticky">
       <div className="header-desk_type_7">
         <div className="header-top theme-bg-color-secondary">
-          <div className="container d-flex align-items-center">
+          <div className="container d-flex align-items-center gap-3">
             <div className="logo">
               <Link href="/">
                 <Image
@@ -27,24 +26,40 @@ export default function Header12() {
             </div>
             {/* <!-- /.logo --> */}
 
-            <div className="header-tools d-flex align-items-center ms-auto">
-              <div className="header-tools__item hover-container">
-                <a className="header-tools__item js-open-aside" href="#">
-                  <User />
-                </a>
-              </div>
+            <form
+              action="/shop-1"
+              className="d-none d-md-flex align-items-center ms-auto gap-2 rounded-pill bg-white px-3 py-2 shadow-sm"
+              role="search"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use href="#icon_search" />
+              </svg>
+              <input
+                type="search"
+                name="q"
+                placeholder="Buscar arreglos..."
+                className="form-control form-control-sm border-0 shadow-none"
+              />
+            </form>
 
-              <Link className="header-tools__item" href="/account_wishlist">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <use href="#icon_heart" />
-                </svg>
-              </Link>
+            <div className="header-tools d-flex align-items-center gap-2 ms-md-3">
+              <button
+                type="button"
+                className="btn btn-sm border border-2 rounded-pill px-3 fw-bold text-uppercase bg-transparent"
+                aria-label="Cambiar idioma"
+              >
+                ES
+              </button>
+
+              <a className="header-tools__item js-open-aside" href="#">
+                <User />
+              </a>
 
               <a
                 onClick={() => openCart()}

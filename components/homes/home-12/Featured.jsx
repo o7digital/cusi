@@ -43,10 +43,7 @@ export default function Featured() {
     let active = true;
     const loadProducts = async () => {
       try {
-        const res = await fetch(
-          "https://oliviers45.sg-host.com/wp-json/wc/store/products?per_page=100",
-          { cache: "no-store" }
-        );
+        const res = await fetch("/api/wp-products", { cache: "no-store" });
         if (!res.ok) throw new Error("Failed to load products");
         const data = await res.json();
         const mapped = data

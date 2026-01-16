@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="position-relative overflow-hidden" style={{ height: '800px' }}>
+    <div className="position-relative overflow-hidden" style={{ width: '100%', aspectRatio: '1536 / 1024' }}>
       {/* Background Image */}
       <div className="position-absolute top-0 start-0 w-100 h-100">
         <img
@@ -18,9 +18,8 @@ export default function Hero() {
           style={{
             width: '100%',
             height: '100%',
-            objectFit: 'contain',
-            objectPosition: 'center center',
-            backgroundColor: '#f5f5f5'
+            objectFit: 'cover',
+            objectPosition: 'center center'
           }}
         />
       </div>

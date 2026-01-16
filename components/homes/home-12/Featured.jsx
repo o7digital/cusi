@@ -66,7 +66,7 @@ export default function Featured() {
                             src={elm.imgSrc}
                             width="256"
                             height="201"
-                            alt="Cropped Faux leather Jacket"
+                            alt={elm.title}
                             className="pc__img"
                           />
                         </Link>

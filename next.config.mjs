@@ -14,6 +14,14 @@ const nextConfig = {
       "legacy-js-api",
     ],
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "oliviers45.sg-host.com",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

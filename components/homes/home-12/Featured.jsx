@@ -91,16 +91,18 @@ export default function Featured() {
 
   useEffect(() => {
     if (currentCategory == "All") {
-      setFiltered(products);
+      setFiltered([...products].sort((a, b) => b.id - a.id));
     } else {
-      setFiltered([
-        ...products.filter((elm) => elm.filterCategory == currentCategory),
-      ]);
+      setFiltered(
+        products
+          .filter((elm) => elm.filterCategory == currentCategory)
+          .sort((a, b) => b.id - a.id)
+      );
     }
   }, [currentCategory, products]);
   return (
     <section className="products-grid">
-      <div className="container">
+      <div className="container-fluid px-3 px-lg-4 px-xxl-5">
         <div className="d-flex align-items-center justify-content-center justify-content-md-between flex-wrap mb-3 pb-xl-2 mb-xl-4 gap-4">
           <h2 className="section-title fw-normal">Nuestros Arreglos</h2>
 
@@ -130,9 +132,9 @@ export default function Featured() {
 
         <div className="tab-content pt-2" id="collections-2-tab-content">
           <div className="tab-pane fade show active">
-            <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5">
+            <div className="row row-cols-2 row-cols-sm-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 g-3 g-xl-4">
               {filtered.map((elm, i) => (
-                <div key={i} className="product-card-wrapper mb-2">
+                <div key={i} className="col product-card-wrapper mb-2">
                   <div className="product-card product-card_style9 border rounded-3 mb-3 mb-md-4">
                     <div className="position-relative pb-3">
                       <div className="pc__img-wrapper pc__img-wrapper_wide3">

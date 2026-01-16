@@ -44,14 +44,12 @@ export default function Featured() {
     const loadProducts = async () => {
       try {
         const res = await fetch(
-          "https://oliviers45.sg-host.com/wp-json/wc/store/products?per_page=50",
+          "https://oliviers45.sg-host.com/wp-json/wc/store/products?per_page=100",
           { cache: "no-store" }
         );
         if (!res.ok) throw new Error("Failed to load products");
         const data = await res.json();
         const mapped = data
-          .slice()
-          .reverse()
           .map((item) => {
             const rating =
               Number.parseFloat(item.average_rating || "4.8") || 4.8;
@@ -71,14 +69,17 @@ export default function Featured() {
               price,
               filterCategory: rating >= 4.8 ? "Best Rated" : "Most Popular",
             };
-          });
+          })
+          .sort((a, b) => b.id - a.id); // newest first
         if (active) {
           setProducts(mapped);
+          setFiltered(mapped);
         }
       } catch (error) {
         console.error("Failed to fetch WP products", error);
         if (active) {
           setProducts(products25);
+          setFiltered(products25);
         }
       }
     };

@@ -13,8 +13,8 @@ export default function Hero() {
       {/* Background Image */}
       <div className="position-absolute top-0 start-0 w-100 h-100">
         <img
-          src="/slider/gemini-noche-buena.png"
-          alt="Felices Fiestas 2025"
+          src="/slider/cusi.png"
+          alt="CUSI Diseño Floral"
           style={{
             width: '100%',
             height: '100%',

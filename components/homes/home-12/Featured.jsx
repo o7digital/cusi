@@ -12,16 +12,91 @@ export default function Featured() {
   const { setQuickViewItem } = useContextElement();
   const { addProductToCart, isAddedToCartProducts } = useContextElement();
   const [currentCategory, setCurrentCategory] = useState(filterCategories[0]);
-  const [filtered, setFiltered] = useState(products25);
+  const [products, setProducts] = useState([]);
+  const [filtered, setFiltered] = useState([]);
+
+  const decodeHTML = (value) => {
+    if (!value) return "";
+    if (typeof window === "undefined") return value;
+    const doc = new DOMParser().parseFromString(value, "text/html");
+    return doc.documentElement.textContent || value;
+  };
+
+  const getImage = (item) => {
+    const apiImg = item.images?.[0]?.src;
+    if (apiImg) return apiImg.replace("http://", "https://");
+    if (item.description && typeof window !== "undefined") {
+      const doc = new DOMParser().parseFromString(item.description, "text/html");
+      const img = doc.querySelector("img")?.getAttribute("src");
+      if (img) return img.replace("http://", "https://");
+    }
+    return "/assets/images/home/demo12/product-1.jpg";
+  };
+
+  const formatPrice = (price) =>
+    Number(price || 0).toLocaleString("es-MX", {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    });
+
+  useEffect(() => {
+    let active = true;
+    const loadProducts = async () => {
+      try {
+        const res = await fetch(
+          "https://oliviers45.sg-host.com/wp-json/wc/store/products?per_page=50",
+          { cache: "no-store" }
+        );
+        if (!res.ok) throw new Error("Failed to load products");
+        const data = await res.json();
+        const mapped = data
+          .slice()
+          .reverse()
+          .map((item) => {
+            const rating =
+              Number.parseFloat(item.average_rating || "4.8") || 4.8;
+            const priceRaw = item.prices?.price;
+            const price =
+              typeof priceRaw === "string"
+                ? Number(priceRaw) / 100
+                : Number(item.price || 0);
+            return {
+              id: item.id,
+              imgSrc: getImage(item),
+              title: decodeHTML(item.name),
+              category:
+                item.categories?.map((c) => c.name).join(", ") || "Bouquets",
+              rating,
+              reviews: item.review_count || 0,
+              price,
+              filterCategory: rating >= 4.8 ? "Best Rated" : "Most Popular",
+            };
+          });
+        if (active) {
+          setProducts(mapped);
+        }
+      } catch (error) {
+        console.error("Failed to fetch WP products", error);
+        if (active) {
+          setProducts(products25);
+        }
+      }
+    };
+    loadProducts();
+    return () => {
+      active = false;
+    };
+  }, []);
+
   useEffect(() => {
     if (currentCategory == "All") {
-      setFiltered(products25);
+      setFiltered(products);
     } else {
       setFiltered([
-        ...products25.filter((elm) => elm.filterCategory == currentCategory),
+        ...products.filter((elm) => elm.filterCategory == currentCategory),
       ]);
     }
-  }, [currentCategory]);
+  }, [currentCategory, products]);
   return (
     <section className="products-grid">
       <div className="container">
@@ -151,7 +226,9 @@ export default function Featured() {
                         </span>
                       </div>
                       <div className="product-card__price d-flex">
-                        <span className="money price fs-5">${elm.price}</span>
+                        <span className="money price fs-5">
+                          MXN ${formatPrice(elm.price)} + IVA
+                        </span>
                       </div>
                     </div>
                   </div>

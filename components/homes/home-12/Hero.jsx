@@ -18,25 +18,11 @@ export default function Hero() {
           style={{
             width: '100%',
             height: '100%',
-            objectFit: 'cover',
-            objectPosition: 'center 40%'
+            objectFit: 'contain',
+            objectPosition: 'center center',
+            backgroundColor: '#f5f5f5'
           }}
         />
-      </div>
-      
-      {/* Title on the left */}
-      <div className="position-absolute top-50 start-0 translate-middle-y ms-5 ms-lg-8 ps-3 ps-lg-5">
-        <h1 
-          className="fw-bold text-white" 
-          style={{ 
-            fontSize: 'clamp(3rem, 8vw, 6rem)',
-            lineHeight: '1',
-            textShadow: '2px 2px 8px rgba(0,0,0,0.5)',
-            letterSpacing: '0.02em'
-          }}
-        >
-          FELICES<br />FIESTAS<br />2025
-        </h1>
       </div>
     </div>
   );

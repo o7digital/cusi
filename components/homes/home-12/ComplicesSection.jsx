@@ -25,7 +25,7 @@ export default function ComplicesSection() {
           <div className="col-12 col-lg-6 order-1 order-lg-2">
             <div className="complices-image-wrapper border-radius-10 overflow-hidden">
               <Image
-                src="/assets/images/home/florial/complices-event.jpg"
+                src="/complices.png"
                 width={600}
                 height={450}
                 alt="Seremos tus cómplices - CUSI Flores"
